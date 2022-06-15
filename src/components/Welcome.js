@@ -12,6 +12,7 @@ function Welcome() {
       <div className="h-0">
         <Particles
           id="tsparticles"
+          className="h-screen"
           options={{
             fullScreen: { enable: false },
             fpsLimit: 120,
@@ -25,27 +26,27 @@ function Welcome() {
                   enable: true,
                   mode: "repulse",
                 },
-                resize: true,
+                resize: false,
               },
               modes: {
                 push: {
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 200,
-                  duration: 0.4,
+                  distance: 150,
+                  duration: 5,
                 },
               },
             },
             particles: {
               color: {
-                value: "#a3a3a3",
+                value: "#ffff",
               },
               links: {
-                color: "#a3a3a3",
+                color: "#ffff",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.2,
                 width: 1,
               },
               collisions: {
@@ -58,7 +59,7 @@ function Welcome() {
                   default: "bounce",
                 },
                 random: false,
-                speed: 6,
+                speed: 2,
                 straight: false,
               },
               number: {
@@ -69,7 +70,7 @@ function Welcome() {
                 value: 60,
               },
               opacity: {
-                value: 0.5,
+                value: 0.2,
               },
               shape: {
                 type: "circle",
