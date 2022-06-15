@@ -1,11 +1,13 @@
-import React  from 'react';
+import React, { useContext }  from 'react';
 import Header from '../components/Header';
 // import Modal from '../components/Modal';
 import TrybewalletThumb from '../images/trybewallet-thumb.png';
 import './ProjectCard.css';
+import AppContext from '../context/AppContext';
 
 function Portfolio() {
   // const [modal, setModal] = useState(false);
+  const { ref } = useContext(AppContext);
 
   return (
     <div>
@@ -31,6 +33,7 @@ function Portfolio() {
         </div>
       </div>
       {/* { modal && <Modal /> } */}
+      <p ref={ref}></p>
     </div>
   );
 }

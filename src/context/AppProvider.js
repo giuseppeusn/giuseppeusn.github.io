@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import AppContext from './AppContext';
 
 function AppProvider({ children }) {
-  const contextValue = {
+  const ref = useRef(null);
 
+  const contextValue = {
+    ref
   };
 
   return (
