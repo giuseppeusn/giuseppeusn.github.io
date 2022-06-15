@@ -1,0 +1,12 @@
+nav li {
+  text-transform: uppercase;
+  font-weight: 600;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  border-bottom: 2px solid black;
+}
+
+nav .active {
+  border-bottom: 2px solid rgb(6 182 212);
+}
