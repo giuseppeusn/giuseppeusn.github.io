@@ -3,6 +3,13 @@ nav li {
   font-weight: 600;
 }
 
+.fixed {
+  display: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 li a{
   position: relative;
 }

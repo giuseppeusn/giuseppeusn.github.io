@@ -27,25 +27,27 @@ function Header() {
   }, [location])
 
   return(
-    <nav className="flex justify-center bg-black opacity-90 border-b-2 border-cyan-500 p-5">
-      <ul className="flex justify-around w-[700px] text-xl text-white">
-        <li className={ active.about ? 'active' : ''}>
-          <Link to="/">
-            Sobre mim
-          </Link>
-        </li>
-        <li className={ active.port ? 'active' : ''}>
-          <Link to="/portfolio">
-            Portfolio
-          </Link>
-        </li>
-        <li className={ active.contact ? 'active' : ''}>
-          <Link to="/contato">
-            Contato
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <div className="fixed">
+      <nav className="flex justify-center bg-black opacity-90 border-b-2 border-cyan-500 p-5">
+        <ul className="flex justify-around w-[700px] text-xl text-white">
+          <li className={ active.about ? 'active' : ''}>
+            <Link to="/">
+              Sobre mim
+            </Link>
+          </li>
+          <li className={ active.port ? 'active' : ''}>
+            <Link to="/portfolio">
+              Portfolio
+            </Link>
+          </li>
+          <li className={ active.contact ? 'active' : ''}>
+            <Link to="/contato">
+              Contato
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
