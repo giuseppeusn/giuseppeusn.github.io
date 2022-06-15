@@ -2,10 +2,13 @@ import React, { useRef, useState } from 'react';
 import AppContext from './AppContext';
 
 function AppProvider({ children }) {
+  const [modal, setModal] = useState(false);
   const ref = useRef(null);
 
   const contextValue = {
-    ref
+    ref,
+    modal,
+    setModal,
   };
 
   return (

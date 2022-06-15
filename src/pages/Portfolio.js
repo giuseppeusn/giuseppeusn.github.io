@@ -1,13 +1,12 @@
 import React, { useContext }  from 'react';
 import Header from '../components/Header';
-// import Modal from '../components/Modal';
+import Modal from '../components/Modal';
 import TrybewalletThumb from '../images/trybewallet-thumb.png';
 import './ProjectCard.css';
 import AppContext from '../context/AppContext';
 
 function Portfolio() {
-  // const [modal, setModal] = useState(false);
-  const { ref } = useContext(AppContext);
+  const { ref, modal, setModal } = useContext(AppContext);
 
   return (
     <div>
@@ -24,7 +23,7 @@ function Portfolio() {
               <button
                 className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
                 hover:bg-cyan-500 transition-all duration-300"
-                // onClick={ () => setModal(true) }
+                onClick={ () => setModal(true) }
               >
               Ver mais
               </button>
@@ -32,7 +31,7 @@ function Portfolio() {
           </div>
         </div>
       </div>
-      {/* { modal && <Modal /> } */}
+      { modal && <Modal /> }
       <p ref={ref}></p>
     </div>
   );
