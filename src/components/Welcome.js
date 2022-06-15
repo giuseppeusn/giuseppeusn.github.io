@@ -3,7 +3,6 @@ import { AiOutlineArrowDown } from 'react-icons/ai';
 import Particles from 'react-tsparticles';
 
 function Welcome() {
-
   const mainContent = useRef(null);
 
   const executeScroll = () => mainContent.current.scrollIntoView();
@@ -83,24 +82,26 @@ function Welcome() {
           }}
         />
       </div>
-        <div className="h-screen flex flex-col items-center justify-center text-white drop-shadow-[10px_10px_10px_rgba(0,0,0,1)]">
-          <div className="text-center text-3xl">
-            <p className="font-light">Olá, meu nome é <span className="text-cyan-500 font-semibold">Giuseppe Nunes</span>!</p>
-            <p className="font-light">Estudante de Desenvolvimento Web Full-Stack</p>
-          </div>
-          <div className="flex mt-8">
-            <button
-              onClick={executeScroll}
-              className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
-              hover:bg-cyan-500 transition-all duration-300"
-            >
-              Veja meus projetos
-              <AiOutlineArrowDown className="text-2xl" />
-            </button>
-          </div>
+      <div
+        className="h-screen flex flex-col items-center
+        justify-center text-white drop-shadow-[10px_10px_10px_rgba(0,0,0,1)]"
+      >
+        <div className="text-center text-3xl">
+          <p className="font-normal">Olá, meu nome é <span className="text-cyan-500 font-bold">Giuseppe Nunes</span>!</p>
+          <p className="font-normal">Estudante de Desenvolvimento Web Full-Stack</p>
         </div>
-        <div ref={mainContent} className="h-screen bg-neutral-800">Element to scroll to</div>
-      {/* </div> */}
+        <div className="flex mt-8">
+          <button
+            onClick={executeScroll}
+            className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
+            hover:bg-cyan-500 transition-all duration-300"
+          >
+            Veja meus projetos
+            <AiOutlineArrowDown className="text-2xl" />
+          </button>
+        </div>
+      </div>
+      <div ref={mainContent} className="bg-neutral-800"></div>
     </div>
   );
 }
