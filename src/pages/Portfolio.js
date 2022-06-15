@@ -9,8 +9,8 @@ function Portfolio() {
 
   return (
     <div>
+      <Header />
       <div className="h-screen bg-neutral-800">
-        <Header />
         <div className="wrap">
           <img src={ TrybewalletThumb } alt="trybewallet project" />
           <div className="image_overlay">

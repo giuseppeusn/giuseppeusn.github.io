@@ -1,0 +1,46 @@
+nav li {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.fixed {
+  display: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+li a{
+  position: relative;
+}
+
+li a:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 0.1em;
+  width: 0%;
+  background-color: rgb(6 182 212);
+  transition: all ease-in-out 250ms;
+}
+
+li a:hover::after{
+  width: 100%;
+}
+
+li a:hover {
+  color: rgb(6 182 212);
+}
+
+.active {
+  position: relative;
+}
+
+.active:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 0.1em;
+  width: 100%;
+  background-color: rgb(6 182 212);
+}
