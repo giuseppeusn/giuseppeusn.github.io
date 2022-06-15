@@ -3,11 +3,16 @@ nav li {
   font-weight: 600;
 }
 
+.wrap-nav {
+  transform: translateY(0px);
+}
+
 .fixed {
   display: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+  animation: popDown 400ms cubic-bezier(.59,.36,.41,.83);
 }
 
 li a{
@@ -43,4 +48,13 @@ li a:hover {
   height: 0.1em;
   width: 100%;
   background-color: rgb(6 182 212);
+}
+
+@keyframes popDown {
+  0% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

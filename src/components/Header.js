@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import AppContext from '../context/AppContext';
 import './Header.css';
+import useOnScreen from '../hook/useOnScreen';
 
 function Header() {
+  const { ref } = useContext(AppContext);
+  const isVisible = useOnScreen(ref);
+
   const location = useLocation();
+
   const [active, setActive] = useState({
     about: false,
     port: false,
@@ -27,7 +33,7 @@ function Header() {
   }, [location])
 
   return(
-    <div className="fixed">
+    <div className={`wrap-nav ${ isVisible && 'fixed'}`}>
       <nav className="flex justify-center bg-black opacity-90 border-b-2 border-cyan-500 p-5">
         <ul className="flex justify-around w-[700px] text-xl text-white">
           <li className={ active.about ? 'active' : ''}>
