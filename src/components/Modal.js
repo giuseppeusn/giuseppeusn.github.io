@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState }  from 'react';
-import TrybewalletThumb from '../images/trybewallet-1.png';
 import { AiFillGithub } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import AppContext from '../context/AppContext';
 import './Modal.css';
 import projects from '../projectData';
+import ImageGallery from 'react-image-gallery';
 
 function Modal({ id }) {
   const { setModal } = useContext(AppContext);
@@ -14,7 +14,7 @@ function Modal({ id }) {
   useEffect(() => {
     const modal = projects.find((e) => e.id === id);
     setModalInfo(modal);
-  },[]);
+  },[id]);
 
   return (
     <div>
@@ -22,8 +22,16 @@ function Modal({ id }) {
         modalInfo &&
         <div className="modal-bg" id="bg" onClick={ (e) => e.target.id === 'bg' && setModal(false)}>
           <div className="modal-wrapper">
-            <img src={modalInfo.images[0].url} alt={modalInfo.images[0].url} className="w-[70%] rounded-l-lg" />
-            <div className="flex flex-col w-full h-full">
+            <div className="flex items-center ml-7 select-none">
+              <ImageGallery
+                items={modalInfo.images}
+                showBullets="true"
+                slideDuration={800}
+                slideInterval={2500}
+                infinite="true"
+              />
+            </div>
+            <div className="flex flex-col w-[60%] h-full">
               <button onClick={ () => setModal(false) } className="self-end text-3xl p-2">
                 <CgClose />
               </button>

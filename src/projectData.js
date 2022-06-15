@@ -10,12 +10,10 @@ const projects = [
     thumb: { url: 'https://i.imgur.com/9qi7CHW.png', alt: 'Trybewallet'},
     images: [
       {
-        url: 'https://i.imgur.com/hj5Q3AK.png',
-        alt: 'Trybewallet página de login',
+        original: 'https://i.imgur.com/hj5Q3AK.png',
       },
       {
-        url: 'https://i.imgur.com/Oc2kIen.png',
-        alt: 'Trybewallet aplicação',
+        original: 'https://i.imgur.com/Oc2kIen.png'
       }
     ],
 
