@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trybe Shopping</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./helpers/fetchItem.js" defer></script>
+    <script src="./helpers/fetchProducts.js" defer></script>
+    <script src="./helpers/saveCartItems.js" defer></script>
+    <script src="./helpers/getSavedCartItems.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" style="text-decoration: none;">
+        <span class="title"><strong>trybe</strong>shopping</span>
+      </a>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Pesquisar" id="input-search">
+        <div class="input-group-append">
+          <button class="btn-secondary" type="button" id="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <i class="material-icons" style="font-size:45px;color:white" id="cart-btn">shopping_cart<span id="count-cart">0</span></i>
+    </header>
+    <section class="container">
+      <section class="items"></section>
+      <section class="cart">
+        <h4 class="cart-title">Carrinho de compras</h4>
+        <ol class="cart__items"></ol>
+        <section class="cart-footer">
+          <h4 class="price">Total: <span class="total-price">R$ 0,00</span></h4>
+          <button class="empty-cart">Esvaziar carrinho</button>
+        </section>
+      </section>
+      </section>
+    </section>
+  </body>
+</html>
