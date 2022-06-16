@@ -1,6 +1,7 @@
 .wrap {
   position: relative;
   width: 400px;
+  animation: dropCard 600ms cubic-bezier(.17,-0.01,.42,1.66);
 }
 
 .wrap img {
@@ -35,4 +36,15 @@
 
 .image_overlay:hover > * {
   transform: translateY(0);
+}
+
+@keyframes dropCard {
+  0% {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

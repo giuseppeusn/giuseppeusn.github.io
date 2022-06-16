@@ -16,6 +16,7 @@ function App() {
         <Route path="/portfolio" element={ <Portfolio />} />
         <Route path="/contato" element={ <Contact />} />
         <Route path="/trybewallet" render={() => {window.location.href="trybewallet"}} />
+        <Route path="/shopping-cart" render={() => {window.location.href="shopping-cart"}} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>      
     </div>
