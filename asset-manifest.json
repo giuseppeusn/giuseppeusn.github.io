@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7ad1bbdf.css",
-    "main.js": "/static/js/main.ff433f02.js",
+    "main.css": "/static/css/main.a0b410de.css",
+    "main.js": "/static/js/main.625675a7.js",
     "static/js/415.61f3cf29.chunk.js": "/static/js/415.61f3cf29.chunk.js",
     "static/js/787.7ea95dab.chunk.js": "/static/js/787.7ea95dab.chunk.js",
-    "static/media/trybewallet-thumb.png": "/static/media/trybewallet-thumb.6721f6d78c4ecee8d840.png",
     "index.html": "/index.html",
-    "main.7ad1bbdf.css.map": "/static/css/main.7ad1bbdf.css.map",
-    "main.ff433f02.js.map": "/static/js/main.ff433f02.js.map",
+    "main.a0b410de.css.map": "/static/css/main.a0b410de.css.map",
+    "main.625675a7.js.map": "/static/js/main.625675a7.js.map",
     "415.61f3cf29.chunk.js.map": "/static/js/415.61f3cf29.chunk.js.map",
     "787.7ea95dab.chunk.js.map": "/static/js/787.7ea95dab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ad1bbdf.css",
-    "static/js/main.ff433f02.js"
+    "static/css/main.a0b410de.css",
+    "static/js/main.625675a7.js"
   ]
 }
