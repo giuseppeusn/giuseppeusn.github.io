@@ -9,7 +9,7 @@ import Welcome from "./components/Welcome";
 
 function App() {
   return (
-    <div className="bg-neutral-800 select-none scroll-smooth">
+    <div className="bg-neutral-900 select-none scroll-smooth">
       <Welcome />
       <Routes>
         <Route exact path="/" element={ <AboutMe /> } />
