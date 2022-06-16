@@ -9,13 +9,14 @@ import Welcome from "./components/Welcome";
 
 function App() {
   return (
-    <div className="h-screen bg-neutral-800 select-none scroll-smooth">
+    <div className="bg-neutral-800 select-none scroll-smooth">
       <Welcome />
       <Routes>
         <Route exact path="/" element={ <AboutMe /> } />
         <Route path="/portfolio" element={ <Portfolio />} />
         <Route path="/contato" element={ <Contact />} />
         <Route path="/trybewallet" render={() => {window.location.href="trybewallet"}} />
+        <Route path="/shopping-cart" render={() => {window.location.href="shopping-cart"}} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>      
     </div>
