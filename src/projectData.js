@@ -25,21 +25,18 @@ const projects = [
     description: 'Shopping Cart é um projeto de HTML, CSS e JavaScript puro. Ao entrar na página é feita uma requisição a API do Mercado Livre mostrando uma vitrine de produtos. O usuário pode pesquisar produtos, adicionar e remover produtos do carrinho. Projeto desenvolvido com design responsivo.',
     repoUrl: 'https://example.com',
     deployUrl: '/shopping-cart',
-    thumb: { url: 'https://example.com', alt: 'Shopping Cart'},
-    // images: [
-    //   {
-    //     original: 'https://i.imgur.com/T9Zj8bm.png'
-    //   },
-    //   {
-    //     original: 'https://i.imgur.com/fAZL0EZ.png'
-    //   },
-    //   {
-    //     original: 'https://i.imgur.com/brTk9WB.png'
-    //   },
-    //   {
-    //     original: 'https://i.imgur.com/UZPEu1O.png','https://i.imgur.com/UOok6UJ.png','https://i.imgur.com/jUtPT8F.png'
-    //   }
-    // ]
+    thumb: { url: 'https://i.imgur.com/BTAQl9W.jpg', alt: 'Shopping Cart'},
+    images: [
+      {
+        original: 'https://i.imgur.com/EGdgBVX.png'
+      },
+      {
+        original: 'https://i.imgur.com/dIfZ7sK.png'
+      },
+      {
+        original: 'https://i.imgur.com/XIw5Ey9.png'
+      }
+    ]
   }
 ]
 
