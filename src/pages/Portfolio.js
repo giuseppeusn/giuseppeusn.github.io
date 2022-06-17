@@ -17,6 +17,7 @@ function Portfolio() {
   return (
     <div>
       <Header />
+      <p ref={ref}></p>
       <div className="h-screen bg-neutral-800">
         {
           projects.map((e) => (
@@ -44,7 +45,6 @@ function Portfolio() {
         
       </div>
       { modal && <Modal id={modalId} /> }
-      <p ref={ref}></p>
     </div>
   );
 }
