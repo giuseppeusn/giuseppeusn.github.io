@@ -7,7 +7,7 @@ nav li {
   transform: translateY(0px);
 }
 
-.fixed {
+.is-fixed {
   display: fixed;
   top: 0;
   width: 100%;

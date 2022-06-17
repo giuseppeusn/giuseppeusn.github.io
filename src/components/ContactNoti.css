@@ -1,0 +1,25 @@
+.wrap-noti {
+  animation: popRight cubic-bezier(.34,.87,.33,.87) 800ms;
+}
+
+.close {
+  animation: popClose cubic-bezier(.34,.87,.33,.87) 800ms;
+}
+
+@keyframes popRight {
+  0% {
+    transform: translateX(248px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes popClose {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(248px);
+  }
+}
