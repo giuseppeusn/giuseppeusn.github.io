@@ -35,7 +35,7 @@ function Contact() {
   return (
     <div className="bg-neutral-800">
       <Header />
-      <div className="h-[80vh]">
+      <div className="h-[84vh]">
         <div className="flex justify-center mt-20">
           <h1 className="text-3xl border-b-2 p-3 text-white font-semibold uppercase">
             <span className="text-cyan-500 text-3xl font-semibold">{'<'}</span>
