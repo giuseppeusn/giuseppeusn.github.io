@@ -64,6 +64,19 @@ const projects = [
         original: 'https://i.imgur.com/RiljCbq.png',
       }
     ]
+  },
+  {
+    id: '3',
+    name: 'example',
+    tags: 'example',
+    shortDescription: 'Lorem Ipsum',
+    description: 'Lorem Ipsum',
+    thumb: { url: 'https://picsum.photos/400/400', alt: '' },
+    images: [
+      {
+        original: 'https://picsum.photos/1920/1080',
+      }
+    ]
   }
 ]
 

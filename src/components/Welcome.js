@@ -5,12 +5,12 @@ import AppContext from '../context/AppContext';
 
 function Welcome() {
   const mainContent = useRef(null);
-  const { welcomeRef } = useContext(AppContext);
+  const { welcomeRef, welcomeScrollRef } = useContext(AppContext);
 
   const executeScroll = () => mainContent.current.scrollIntoView();
 
   return (
-    <div>
+    <div ref={welcomeScrollRef}>
       <div className="h-0">
         <Particles
           id="tsparticles"
