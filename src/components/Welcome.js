@@ -1,15 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import Particles from 'react-tsparticles';
+import AppContext from '../context/AppContext';
 
 function Welcome() {
   const mainContent = useRef(null);
+  const { welcomeRef } = useContext(AppContext);
 
   const executeScroll = () => mainContent.current.scrollIntoView();
 
   return (
     <div>
-      <div className="h-0">
+      <div className="h-0" ref={welcomeRef}>
         <Particles
           id="tsparticles"
           className="h-screen"
