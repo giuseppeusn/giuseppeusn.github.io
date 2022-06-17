@@ -11,7 +11,7 @@ function Welcome() {
 
   return (
     <div>
-      <div className="h-0" ref={welcomeRef}>
+      <div className="h-0">
         <Particles
           id="tsparticles"
           className="h-screen"
@@ -85,11 +85,11 @@ function Welcome() {
           }}
         />
       </div>
-      <div
+      <div        
         className="h-screen flex flex-col items-center
         justify-center text-white drop-shadow-[10px_10px_10px_rgba(0,0,0,1)]"
       >
-        <div className="text-center text-3xl">
+        <div ref={welcomeRef} className="text-center text-3xl">
           <p className="font-normal">Olá, meu nome é <span className="text-cyan-500 font-bold">Giuseppe Nunes</span>!</p>
           <p className="font-normal">Estudante de Desenvolvimento Web Full-Stack</p>
         </div>

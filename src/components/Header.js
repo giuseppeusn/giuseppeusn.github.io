@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import AppContext from '../context/AppContext';
-import './Header.css';
 import useOnScreen from '../hook/useOnScreen';
+import './Header.css';
 
 function Header() {
-  const { ref } = useContext(AppContext);
-  const isVisible = useOnScreen(ref);
+  const { ref, welcomeRef } = useContext(AppContext);
+  const isVisibleHeader = useOnScreen(ref);
+  const isWelcomeVisible = useOnScreen(welcomeRef);
 
   const location = useLocation();
 
@@ -15,6 +16,8 @@ function Header() {
     port: false,
     contact: false,
   })
+
+  const [isRender, setRender] = useState(false);
 
   useEffect(() => {
     const path = location.pathname.split('/')[1];
@@ -30,10 +33,12 @@ function Header() {
         setActive({port: false, contact: false, about: true });
         break;
     }
+
+    setTimeout(() => setRender(true), 10);
   }, [location])
 
   return(
-    <div className={`wrap-nav ${ isVisible && 'is-fixed'}`}>
+    <div className={`wrap-nav ${ isRender && (!isVisibleHeader && !isWelcomeVisible ? 'is-fixed' : '') }`}>
       <nav className="flex justify-center bg-[#1e1e1e] opacity-90 border-b-2 border-cyan-500 p-5">
         <ul className="flex justify-around w-[700px] text-xl text-white">
           <li className={ active.about ? 'active' : ''}>

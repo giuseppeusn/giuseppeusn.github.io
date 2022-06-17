@@ -37,6 +37,7 @@ function Contact() {
   return (
     <div className="bg-neutral-800">
       <Header />
+      <p ref={ref}></p>
       <div className="h-[75vh]">
         <div className="flex justify-center mt-20">
           <div className="title">
@@ -96,7 +97,6 @@ function Contact() {
         </div>
       </div>
       {notify.isSubmit && <ContactNoti isSucess={notify.isSucess} />}
-      <p ref={ref}></p>
     </div>
   );
 }
