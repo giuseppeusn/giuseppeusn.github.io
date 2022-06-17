@@ -33,7 +33,7 @@ function Header() {
   }, [location])
 
   return(
-    <div className={`wrap-nav ${ isVisible && 'fixed'}`}>
+    <div className={`wrap-nav ${ isVisible && 'is-fixed'}`}>
       <nav className="flex justify-center bg-[#1e1e1e] opacity-90 border-b-2 border-cyan-500 p-5">
         <ul className="flex justify-around w-[700px] text-xl text-white">
           <li className={ active.about ? 'active' : ''}>

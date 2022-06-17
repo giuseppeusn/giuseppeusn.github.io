@@ -1,22 +1,35 @@
-import React, { useContext} from 'react';
+import React, { useContext, useState} from 'react';
 import Header from '../components/Header';
 import AppContext from '../context/AppContext';
 import emailjs from '@emailjs/browser';
+import ContactNoti from '../components/ContactNoti';
+import { ImSpinner2 } from 'react-icons/im';
 
 function Contact() {
   const { ref } = useContext(AppContext);
+  const [notify, setNotify] = useState({
+    isSubmit: false,
+    isSucess: true,
+  });
+
+  const [load, setLoad] = useState(false);
   
   const sendEmail = (e) => {
     e.preventDefault();
 
+    setLoad(true);
+
     emailjs.sendForm('service_tyo66sa', 'portfolio_template', e.target, '9xYB4MxNZkHphIcH1')
-      .then((result) => {
-          console.log(result.text);
+      .then(() => {
+          setNotify({ isSubmit: true, isSucess: true });
+          e.target.reset();
       }, (error) => {
+          setNotify({ isSubmit: true, isSucess: false });
           console.log(error.text);
-      });
-    
-    e.target.reset();
+      }).then(() => {
+        setLoad(false);
+        setTimeout(() => setNotify({ isSubmit: false, isSucess: false }), 4800);
+      })
   };
 
   return (
@@ -57,16 +70,22 @@ function Contact() {
               outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white"
               name="message"
             />
-            <button
-              type="submit"
-              className="flex items-center justify-center text-lg w-48 border border-cyan-500 p-3
-              hover:bg-cyan-500 transition-all duration-300"
-            >
-              Enviar
-            </button>
+            { !load ? (
+                <button
+                  type="submit"
+                  className="flex items-center justify-center text-lg w-48 border border-cyan-500 p-3
+                  hover:bg-cyan-500 transition-all duration-300"
+                >
+                  Enviar
+                </button>
+              ) : (
+              <ImSpinner2 className="animate-spin text-cyan-500 h-[54px]" />
+              )
+            } 
           </form>
         </div>
       </div>
+      {notify.isSubmit && <ContactNoti isSucess={notify.isSucess} />}
       <p ref={ref}></p>
     </div>
   );
