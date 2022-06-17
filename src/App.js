@@ -6,6 +6,7 @@ import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Welcome from "./components/Welcome";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/shopping-cart" render={() => {window.location.href="shopping-cart"}} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>      
+      <Footer />
     </div>
   );
 }
