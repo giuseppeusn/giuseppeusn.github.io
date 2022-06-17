@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.aa80cdf2.css",
+    "main.js": "./static/js/main.3368a26c.js",
+    "static/media/super_trunfo.png": "./static/media/super_trunfo.08b8eda00fa8a15814bc.png",
+    "index.html": "./index.html",
+    "main.aa80cdf2.css.map": "./static/css/main.aa80cdf2.css.map",
+    "main.3368a26c.js.map": "./static/js/main.3368a26c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa80cdf2.css",
+    "static/js/main.3368a26c.js"
+  ]
+}

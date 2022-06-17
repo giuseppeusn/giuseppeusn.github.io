@@ -18,6 +18,7 @@ function App() {
         <Route path="/contato" element={ <Contact />} />
         <Route path="/trybewallet" render={() => {window.location.href="trybewallet"}} />
         <Route path="/shopping-cart" render={() => {window.location.href="shopping-cart"}} />
+        <Route path="/tryunfo" render={() => {window.location.href="tryunfo"}} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>      
       <Footer />

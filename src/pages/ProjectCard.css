@@ -1,6 +1,7 @@
 .wrap {
   position: relative;
   width: 400px;
+  height: 400px;
   animation: dropCard 600ms cubic-bezier(.17,-0.01,.42,1.66);
 }
 
