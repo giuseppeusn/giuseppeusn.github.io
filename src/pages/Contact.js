@@ -4,6 +4,8 @@ import AppContext from '../context/AppContext';
 import emailjs from '@emailjs/browser';
 import ContactNoti from '../components/ContactNoti';
 import { ImSpinner2 } from 'react-icons/im';
+import './Title.css';
+import './Contact.css';
 
 function Contact() {
   const { ref } = useContext(AppContext);
@@ -37,18 +39,24 @@ function Contact() {
       <Header />
       <div className="h-[75vh]">
         <div className="flex justify-center mt-20">
+          <div className="title">
           <h1 className="text-3xl border-b-2 p-3 text-white font-semibold uppercase">
             <span className="text-cyan-500 text-3xl font-semibold">{'<'}</span>
               contato
             <span className="text-cyan-500 text-2xl font-semibold">/</span>
             <span className="text-cyan-500 text-3xl font-semibold">{'>'}</span>
           </h1>
+          </div>
         </div>
         <div className="flex flex-col items-center mt-20 text-3xl">
-          <h1 className="text-lg text-cyan-500 w-[420px] text-center">Tem uma dúvida/sugestão ou uma oportunidade de trabalho/projeto?</h1>
+          <div className="title">
+            <h1 className="text-lg text-cyan-500 w-[420px] text-center">
+              Dúvida/sugestão ou uma oportunidade de trabalho/projeto?
+            </h1>
+          </div>            
           <form
             onSubmit={sendEmail}
-            className="flex flex-col justify-around items-center mt-10 h-80 w-[600px] p-8 rounded-lg"
+            className="form-control flex flex-col justify-around items-center mt-10 h-80 w-[600px] p-8 rounded-lg"
           >
             <div className="flex items-around w-[90%]">
               <input

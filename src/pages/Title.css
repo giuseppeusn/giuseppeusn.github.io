@@ -1,0 +1,36 @@
+.title {
+  overflow: hidden;
+  position: relative;
+}
+
+.title::after {
+  animation: tilteReveal 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+  background-color: white;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.title h1 {
+  animation: fade 1ms 0.8s forwards;
+  opacity: 0;
+}
+
+@keyframes tilteReveal {
+  from {
+    transform: translateX(-101%);
+  }
+  to {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
