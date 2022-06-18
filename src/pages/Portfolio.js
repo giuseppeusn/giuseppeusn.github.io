@@ -24,8 +24,8 @@ function Portfolio() {
         <div className="flex justify-center mt-20">
           <div className="grid grid-cols-3 gap-4">
           {
-            projects.map((e) => (
-              <div className="wrap">
+            projects.map((e, i) => (
+              <div className="wrap" style={{ "--order": i }}>
                 <img src={ e.thumb.url } alt={e.thumb.alt} className="h-[400px] object-cover" />
                 <div className="image_overlay">
                   <div className="flex flex-col items-center">
