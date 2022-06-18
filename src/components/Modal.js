@@ -10,18 +10,27 @@ import ImageGallery from 'react-image-gallery';
 function Modal({ id }) {
   const { setModal } = useContext(AppContext);
   const [modalInfo, setModalInfo] = useState();
+  const [mode, setMode] = useState({
+    wrapper: '',
+    background: '',
+  });
 
   useEffect(() => {
     const modal = projects.find((e) => e.id === id);
     setModalInfo(modal);
   },[id]);
 
+  const closeModal = () => {
+    setMode({ wrapper: 'close', background: 'close-modal' });
+    setTimeout(() => setModal(false), 600);
+  }
+
   return (
     <div>
       {
         modalInfo &&
-        <div className="modal-bg" id="bg" onClick={ (e) => e.target.id === 'bg' && setModal(false)}>
-          <div className="modal-wrapper">
+        <div className={`modal-bg ${mode.background}`} id="bg" onClick={ (e) => e.target.id === 'bg' && closeModal()}>
+          <div className={`modal-wrapper ${mode.wrapper}`}>
             <div className="flex items-center ml-7 select-none">
               <ImageGallery
                 items={modalInfo.images}
@@ -32,7 +41,7 @@ function Modal({ id }) {
               />
             </div>
             <div className="flex flex-col w-[60%] h-full">
-              <button onClick={ () => setModal(false) } className="self-end text-3xl p-2">
+              <button onClick={ closeModal } className="self-end text-3xl p-2">
                 <CgClose />
               </button>
               <div className="flex flex-col items-center justify-between h-full">

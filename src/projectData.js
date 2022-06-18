@@ -37,6 +37,46 @@ const projects = [
         original: 'https://i.imgur.com/XIw5Ey9.png'
       }
     ]
+  },
+  {
+    id: '2',
+    name: 'Tryunfo',
+    tags: 'React JS',
+    shortDescription: 'Crie um baralho estilo Trunfo',
+    description: 'Tryunfo é uma aplicação que permite o usuário criar cartas de baralho para um jogo inspirado em Trunfo. O usuário pode criar novas cartas preenchendo o nome, descrição, atributos, imagem, raridade e se é "super trunfo". Ao salvar a carta, o usuário pode pesquisar por nome, raridade e marcador "super trunfo".',
+    repoUrl: 'https://example.com',
+    deployUrl: '/tryunfo',
+    thumb: { url: 'https://i.imgur.com/32J63Vz.png', alt: 'Tryunfo' },
+    images: [
+      {
+        original: 'https://i.imgur.com/KOWXM5n.png',
+      },
+      {
+        original: 'https://i.imgur.com/uD3jY4Z.png',
+      },
+      {
+        original: 'https://i.imgur.com/qu6OT9d.png',
+      },
+      {
+        original: 'https://i.imgur.com/4EA3yqN.png',
+      },
+      {
+        original: 'https://i.imgur.com/RiljCbq.png',
+      }
+    ]
+  },
+  {
+    id: '3',
+    name: 'example',
+    tags: 'example',
+    shortDescription: 'Lorem Ipsum',
+    description: 'Lorem Ipsum',
+    thumb: { url: 'https://picsum.photos/400/400', alt: '' },
+    images: [
+      {
+        original: 'https://picsum.photos/1920/1080',
+      }
+    ]
   }
 ]
 

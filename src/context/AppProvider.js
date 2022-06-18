@@ -5,12 +5,14 @@ function AppProvider({ children }) {
   const [modal, setModal] = useState(false);
   const ref = useRef(null);
   const welcomeRef = useRef(null);
+  const welcomeScrollRef = useRef(null);
 
   const contextValue = {
     ref,
     modal,
     setModal,
     welcomeRef,
+    welcomeScrollRef
   };
 
   return (

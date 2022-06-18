@@ -3,9 +3,9 @@ import { IoIosArrowUp } from 'react-icons/io';
 import AppContext from '../context/AppContext';
 
 const Footer = () => {
-  const { welcomeRef } = useContext(AppContext);
+  const { welcomeScrollRef } = useContext(AppContext);
 
-  const executeScroll = () => welcomeRef.current.scrollIntoView();
+  const executeScroll = () => welcomeScrollRef.current.scrollIntoView();
 
   return (
     <footer className="flex justify-center items-center bg-[#1e1e1e] h-20 text-white">
