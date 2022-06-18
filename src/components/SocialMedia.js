@@ -14,7 +14,7 @@ const SocialMedia = () => {
       <a href='https://www.instagram.com/giuseppe_usn/' target="_blank" title="Link externo" rel="noreferrer">
         <FiInstagram className="icon-3 text-white text-3xl opacity-30 hover:opacity-100 transition-all duration-300"/>
       </a>
-      <div className="trace bg-white w-[2px] content-end opacity-30"></div>
+      <span className="trace bg-white w-[2px] opacity-30"></span>
     </div>
   )
 }

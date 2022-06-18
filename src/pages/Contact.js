@@ -39,9 +39,9 @@ function Contact() {
     <div className="bg-neutral-800">
       <Header />
       <p ref={ref}></p>
-      <div className="h-[75vh]">
+      <div className="flex flex-col">
         <Title title="contato" />
-        <div className="flex flex-col items-center mt-20 text-3xl">
+        <div className="flex flex-col items-center mt-20 text-3xl pb-20">
           <div className="title">
             <h1 className="text-lg text-cyan-500 w-[420px] text-center">
               Dúvida/sugestão ou uma oportunidade de trabalho/projeto?

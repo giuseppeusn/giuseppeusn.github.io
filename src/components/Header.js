@@ -38,7 +38,7 @@ function Header() {
   }, [location])
 
   return(
-    <div className={`wrap-nav ${ isRender && (!isVisibleHeader && !isWelcomeVisible ? 'is-fixed' : '') }`}>
+    <div className={`wrap-nav absolute w-full ${ isRender && (!isVisibleHeader && !isWelcomeVisible ? 'is-fixed' : '') }`}>
       <nav className="flex justify-center bg-[#1e1e1e] border-b-2 border-cyan-500 p-5">
         <ul className="flex justify-around w-[700px] text-xl text-white">
           <li className={ active.about ? 'active' : ''}>

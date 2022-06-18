@@ -10,8 +10,10 @@ function AboutMe() {
     <div>
       <Header />
       <p ref={ref}></p>
-      <div className="flex justify-center items-center text-3xl text-white h-screen bg-neutral-800">
-        <Title title="sobre mim" />
+      <div className="h-screen bg-neutral-800">
+        <div className="flex justify-center">
+          <Title title="sobre mim" />
+        </div>
       </div>
     </div>
   );
