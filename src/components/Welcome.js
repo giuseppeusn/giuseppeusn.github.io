@@ -89,9 +89,13 @@ function Welcome() {
         className="h-screen flex flex-col items-center
         justify-center text-white drop-shadow-[10px_10px_10px_rgba(0,0,0,1)]"
       >
-        <div ref={welcomeRef} className="text-center text-3xl">
-          <p className="font-normal">Olá, meu nome é <span className="text-cyan-500 font-bold">Giuseppe Nunes</span>!</p>
-          <p className="font-normal">Estudante de Desenvolvimento Web Full-Stack</p>
+        <div ref={welcomeRef} className="text-center">
+          <p className="font-light text-4xl">
+            Olá, meu nome é
+            <span className="text-cyan-500 font-bold"> Giuseppe Nunes</span>
+            !
+          </p>
+          <p className="font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
         </div>
         <div className="flex mt-8">
           <button
