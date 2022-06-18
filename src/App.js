@@ -7,11 +7,13 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Welcome from "./components/Welcome";
 import Footer from "./components/Footer";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   return (
     <div className="bg-neutral-900 select-none scroll-smooth">
       <Welcome />
+      <SocialMedia />
       <Routes>
         <Route exact path="/" element={ <AboutMe /> } />
         <Route path="/portfolio" element={ <Portfolio />} />
