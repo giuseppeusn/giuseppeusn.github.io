@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import Particles from 'react-tsparticles';
 import AppContext from '../context/AppContext';
+import useOnScreen from '../hook/useOnScreen';
 import './Welcome.css'
 
 function Welcome() {
   const { welcomeRef, welcomeScrollRef, content } = useContext(AppContext);
+  const isVisible = useOnScreen(welcomeScrollRef);
 
   const executeScroll = () => content.current.scrollIntoView();
 
@@ -86,28 +88,33 @@ function Welcome() {
         />
       </div>
       <div        
-        className="h-screen flex flex-col items-center
-        justify-center text-white"
+        className="flex justify-center items-center h-screen"
       >
         <p ref={welcomeRef} ></p>
-        <div className="title-anim text-center">
-          <p className="font-light text-4xl">
-            Olá, meu nome é
-            <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
-            !
-          </p>
-          <p className="font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
-        </div>
-        <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
-          <button
-            onClick={executeScroll}
-            className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
-            hover:bg-cyan-500 transition-all duration-300"
-          >
-            Veja meus projetos
-            <AiOutlineArrowDown className="text-2xl" />
-          </button>
-        </div>
+        {
+          isVisible &&
+          <div className="flex flex-col items-center text-white">
+            <div className="title-anim text-center">
+              <p className="font-light text-4xl">
+                Olá, meu nome é
+                <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
+                !
+              </p>
+              <p className="font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
+            </div>
+            <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
+              <button
+                onClick={executeScroll}
+                className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
+                hover:bg-cyan-500 transition-all duration-300"
+              >
+                Veja meus projetos
+                <AiOutlineArrowDown className="text-2xl" />
+              </button>
+            </div>
+          </div>
+        }
+        
       </div>
     </div>
   );
