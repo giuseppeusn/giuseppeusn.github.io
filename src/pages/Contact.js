@@ -40,23 +40,24 @@ function Contact() {
   };
 
   return (
-    <div className="bg-neutral-800">
+    <div>
       <Header />
       <p ref={ref}></p>
-      <div ref={content} className="h-screen flex flex-col mt-[1px]">
+      <div className="contact-container h-screen bg-neutral-800 flex flex-col pb-28 mt-[1px]">
+        <div ref={content} className="h-screen">
         {
           contentVisible &&
             <div>
               <Title title="contato" />
-              <div className="flex flex-col items-center mt-32 text-3xl pb-20">
-                <div className="title">
+              <div className="flex flex-col items-center mt-32 text-3xl">
+                <div className="contact-title">
                   <h1 className="text-lg text-cyan-500 w-[420px] text-center">
                     Dúvida/sugestão ou uma oportunidade de trabalho/projeto?
                   </h1>
                 </div>            
                 <form
                   onSubmit={sendEmail}
-                  className="form-control flex flex-col justify-around items-center mt-10 h-80 w-[600px] p-8 rounded-lg"
+                  className="form-control flex flex-col justify-around items-center mt-10 h-80 w-[600px] rounded-lg"
                 >
                   <div className="flex items-around w-[90%]">
                     <input
@@ -97,6 +98,7 @@ function Contact() {
               </div>
             </div>
         }
+        </div>
       </div>
       {notify.isSubmit && <ContactNoti isSucess={notify.isSucess} />}
     </div>

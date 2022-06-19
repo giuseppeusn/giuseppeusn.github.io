@@ -93,14 +93,14 @@ function Welcome() {
         <p ref={welcomeRef} ></p>
         {
           isVisible &&
-          <div className="flex flex-col items-center text-white">
+          <div className="title-container flex flex-col items-center text-white">
             <div className="title-anim text-center">
-              <p className="font-light text-4xl">
+              <p className="tile-main font-light text-4xl">
                 Olá, meu nome é
                 <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
                 !
               </p>
-              <p className="font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
+              <p className="subtitle font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
             </div>
             <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
               <button

@@ -44,3 +44,23 @@
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 570px){
+  .social {
+    width: 50px;
+  }
+
+  .social svg {
+    font-size: 1.5rem; 
+  }
+}
+
+@media screen and (max-width: 400px){
+  .social {
+    width: 35px;
+  }
+
+  .social svg {
+    font-size: 1.2rem;
+  }
+}

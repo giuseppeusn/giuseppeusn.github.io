@@ -58,3 +58,9 @@ ul .active:after {
     transform: translateY(0px);
   }
 }
+
+@media screen and (max-width: 500px){
+  .wrap-nav ul {
+    font-size: 1rem;
+  }
+}

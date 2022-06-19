@@ -5,7 +5,7 @@ import Title from '../components/Title';
 import AppContext from '../context/AppContext';
 import useOnScreen from '../hook/useOnScreen';
 import projects from '../projectData';
-import './ProjectCard.css';
+import './Portfolio.css';
 
 function Portfolio() {
   const { ref, modal, setModal, content } = useContext(AppContext);
@@ -22,12 +22,12 @@ function Portfolio() {
     <div>
       <Header />
       <p ref={ref}></p>
-      <div ref={content} className="h-[120vh] flex flex-col bg-neutral-800 pb-20 mt-[1px]">
+      <div ref={content} className="port-container h-[120vh] flex flex-col bg-neutral-800 pb-20 mt-[1px]">
         {
           contentVisible ? <Title title="portfolio" /> : <span className="mt-32 h-[62px]"></span>
         }
         <div className="flex justify-center mt-20">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="cards grid grid-cols-3 gap-4">
           {
             projects.map((e, i) => (
               <div className="wrap" style={{ "--order": i }}>
