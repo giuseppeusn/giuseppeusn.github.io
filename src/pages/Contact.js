@@ -1,4 +1,4 @@
-import React, { useContext, useState} from 'react';
+import React, { useContext, useRef, useState} from 'react';
 import Header from '../components/Header';
 import AppContext from '../context/AppContext';
 import emailjs from '@emailjs/browser';
@@ -12,6 +12,7 @@ import SocialMedia from '../components/SocialMedia';
 
 function Contact() {
   const { ref, content } = useContext(AppContext);
+  const x = useRef(null);
   const [notify, setNotify] = useState({
     isSubmit: false,
     isSucess: true,
@@ -19,7 +20,7 @@ function Contact() {
 
   const [load, setLoad] = useState(false);
 
-  const contentVisible = useOnScreen(content);
+  const contentVisible = useOnScreen(x);
   
   const sendEmail = (e) => {
     e.preventDefault();
@@ -44,7 +45,7 @@ function Contact() {
       <Header />
       <p ref={ref}></p>
       <div className="contact-container h-screen bg-neutral-800 flex flex-col pb-28 mt-[1px]">
-        <div ref={content} className="h-screen">
+        <div ref={x} className="relative">
         {
           contentVisible &&
             <div>
@@ -98,6 +99,7 @@ function Contact() {
               </div>
             </div>
         }
+        <div ref={content} className="h-screen w-1 absolute top-0"></div>
         </div>
       </div>
       {notify.isSubmit && <ContactNoti isSucess={notify.isSucess} />}
