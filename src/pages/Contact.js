@@ -12,7 +12,7 @@ import SocialMedia from '../components/SocialMedia';
 
 function Contact() {
   const { ref, content } = useContext(AppContext);
-  const x = useRef(null);
+  const contactContainer = useRef(null);
   const [notify, setNotify] = useState({
     isSubmit: false,
     isSucess: true,
@@ -20,7 +20,7 @@ function Contact() {
 
   const [load, setLoad] = useState(false);
 
-  const contentVisible = useOnScreen(x);
+  const contentVisible = useOnScreen(contactContainer);
   
   const sendEmail = (e) => {
     e.preventDefault();
@@ -45,7 +45,7 @@ function Contact() {
       <Header />
       <p ref={ref}></p>
       <div className="contact-container h-screen bg-neutral-800 flex flex-col pb-28 mt-[1px]">
-        <div ref={x} className="relative">
+        <div ref={contactContainer} className="relative">
         {
           contentVisible &&
             <div>
