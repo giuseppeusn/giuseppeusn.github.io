@@ -8,6 +8,7 @@ import '../components/Title.css';
 import './Contact.css';
 import Title from '../components/Title';
 import useOnScreen from '../hook/useOnScreen';
+import SocialMedia from '../components/SocialMedia';
 
 function Contact() {
   const { ref, content } = useContext(AppContext);
@@ -92,6 +93,7 @@ function Contact() {
                     )
                   } 
                 </form>
+                <SocialMedia className="social-contact" />
               </div>
             </div>
         }
