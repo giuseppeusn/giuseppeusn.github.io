@@ -3,7 +3,7 @@
   width: 400px;
   height: 400px;
   opacity: 0;
-  animation: shown 1.2s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+  animation: shown 1s cubic-bezier(0.85, 0, 0.15, 1) forwards;
   animation-delay: calc(var(--order) * 300ms);
 }
 

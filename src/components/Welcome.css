@@ -1,9 +1,6 @@
 .title-anim {
-  /* opacity: 0;
-    transform: translateY(50px); */
-  animation: shown 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+  animation: shownText 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
   animation-delay: calc(var(--order) * 500ms) ;
-  /* transition: all ease-in 300ms; */
 }
 
 
@@ -18,7 +15,7 @@
   }
 }
 
-@keyframes shown {
+@keyframes shownText {
   from {
     opacity: 0;
     transform: translateY(50px);
