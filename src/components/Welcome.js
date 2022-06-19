@@ -2,19 +2,20 @@ import React, { useContext, useRef } from 'react';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import Particles from 'react-tsparticles';
 import AppContext from '../context/AppContext';
+import './Welcome.css'
 
 function Welcome() {
-  const mainContent = useRef(null);
-  const { welcomeRef, welcomeScrollRef } = useContext(AppContext);
+  // const mainContent = useRef(null);
+  const { welcomeRef, welcomeScrollRef, content } = useContext(AppContext);
 
-  const executeScroll = () => mainContent.current.scrollIntoView();
+  const executeScroll = () => content.current.scrollIntoView();
 
   return (
     <div ref={welcomeScrollRef}>
       <div className="h-0">
         <Particles
           id="tsparticles"
-          className="h-screen"
+          className="particle-anim h-screen"
           options={{
             fullScreen: { enable: false },
             fpsLimit: 120,
@@ -87,17 +88,18 @@ function Welcome() {
       </div>
       <div        
         className="h-screen flex flex-col items-center
-        justify-center text-white drop-shadow-[10px_10px_10px_rgba(0,0,0,1)]"
+        justify-center text-white"
       >
-        <div ref={welcomeRef} className="text-center">
+        <p ref={welcomeRef} ></p>
+        <div className="title-anim text-center">
           <p className="font-light text-4xl">
             Olá, meu nome é
-            <span className="text-cyan-500 font-bold"> Giuseppe Nunes</span>
+            <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
             !
           </p>
           <p className="font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
         </div>
-        <div className="flex mt-8">
+        <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
           <button
             onClick={executeScroll}
             className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
@@ -108,7 +110,7 @@ function Welcome() {
           </button>
         </div>
       </div>
-      <div ref={mainContent} className="bg-neutral-800"></div>
+      {/* <div ref={mainContent} className="bg-neutral-800"></div> */}
     </div>
   );
 }
