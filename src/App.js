@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import NotFound from './pages/NotFound';
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
@@ -10,10 +10,12 @@ import Footer from "./components/Footer";
 import SocialMedia from "./components/SocialMedia";
 
 function App() {
+  const { pathname } = useLocation();
+
   return (
     <div className="bg-neutral-900 select-none scroll-smooth">
       <Welcome />
-      <SocialMedia />
+      { pathname !== '/contato' && <SocialMedia /> }
       <Routes>
         <Route exact path="/" element={ <AboutMe /> } />
         <Route path="/portfolio" element={ <Portfolio />} />

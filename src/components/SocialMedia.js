@@ -2,9 +2,9 @@ import React from 'react';
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import './SocialMedia.css';
 
-const SocialMedia = () => {
+const SocialMedia = ({ className = 'social'}) => {
   return (
-    <div className="fixed flex flex-col items-center justify-around z-10 bottom-0 w-[80px] h-[300px]">
+    <div className={className}>
       <a href='https://github.com/giuseppeusn' target="_blank" title="Link externo" rel="noreferrer">
         <FiGithub
           className="icon text-white text-3xl opacity-30 hover:opacity-100 transition-all duration-300"

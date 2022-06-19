@@ -9,7 +9,7 @@ function Header() {
   const isVisibleHeader = useOnScreen(ref);
   const isWelcomeVisible = useOnScreen(welcomeRef);
 
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   const [active, setActive] = useState({
     about: false,
@@ -20,13 +20,11 @@ function Header() {
   const [isRender, setRender] = useState(false);
 
   useEffect(() => {
-    const path = location.pathname.split('/')[1];
-
-    switch(path) {
-      case 'portfolio':
+    switch(pathname) {
+      case '/portfolio':
         setActive({port: true, contact: false, about: false });
         break;
-      case 'contato':
+      case '/contato':
         setActive({port: false, contact: true, about: false });
         break;
       default:
@@ -35,7 +33,7 @@ function Header() {
     }
 
     setTimeout(() => setRender(true), 10);
-  }, [location])
+  }, [pathname])
 
   return(
     <div className={`wrap-nav absolute w-full ${ isRender && (!isVisibleHeader && !isWelcomeVisible ? 'is-fixed' : '') }`}>

@@ -6,10 +6,12 @@ function AppProvider({ children }) {
   const ref = useRef(null);
   const welcomeRef = useRef(null);
   const welcomeScrollRef = useRef(null);
+  const content = useRef(null);
 
   const contextValue = {
     ref,
     modal,
+    content,
     setModal,
     welcomeRef,
     welcomeScrollRef

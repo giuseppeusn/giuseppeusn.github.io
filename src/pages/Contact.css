@@ -8,3 +8,59 @@
     transform: scale(100%);
   }
 }
+
+@media screen and (max-width: 605px){
+  .contact-container {
+    height: 100%;
+  }
+
+  .form-control {
+    width: 500px;
+  }
+
+  .form-control button {
+    padding: 0.6rem;
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .form-control {
+    width: 400px;
+  }
+
+  .form-control input, .form-control textarea {
+    font-size: 0.9rem;
+  }
+
+  .form-control button {
+    padding: 0.4rem;
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-title h1 {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .form-control {
+    width: 300px;
+    height: 15rem;
+  }
+
+  .form-control input, .form-control textarea {
+    font-size: 0.8rem;
+  }
+
+  .form-control button {
+    padding: 0.3rem;
+    width: 7rem;
+    font-size: 0.8rem;
+  }
+
+  .contact-title h1 {
+    width: 300px;
+  }
+}

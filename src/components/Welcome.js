@@ -1,20 +1,22 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import Particles from 'react-tsparticles';
 import AppContext from '../context/AppContext';
+import useOnScreen from '../hook/useOnScreen';
+import './Welcome.css'
 
 function Welcome() {
-  const mainContent = useRef(null);
-  const { welcomeRef, welcomeScrollRef } = useContext(AppContext);
+  const { welcomeRef, welcomeScrollRef, content } = useContext(AppContext);
+  const isVisible = useOnScreen(welcomeScrollRef);
 
-  const executeScroll = () => mainContent.current.scrollIntoView();
+  const executeScroll = () => content.current.scrollIntoView();
 
   return (
     <div ref={welcomeScrollRef}>
       <div className="h-0">
         <Particles
           id="tsparticles"
-          className="h-screen"
+          className="particle-anim h-screen"
           options={{
             fullScreen: { enable: false },
             fpsLimit: 120,
@@ -69,7 +71,7 @@ function Welcome() {
                   enable: true,
                   area: 800,
                 },
-                value: 60,
+                value: 50,
               },
               opacity: {
                 value: 0.2,
@@ -86,25 +88,34 @@ function Welcome() {
         />
       </div>
       <div        
-        className="h-screen flex flex-col items-center
-        justify-center text-white drop-shadow-[10px_10px_10px_rgba(0,0,0,1)]"
+        className="flex justify-center items-center h-screen"
       >
-        <div ref={welcomeRef} className="text-center text-3xl">
-          <p className="font-normal">Olá, meu nome é <span className="text-cyan-500 font-bold">Giuseppe Nunes</span>!</p>
-          <p className="font-normal">Estudante de Desenvolvimento Web Full-Stack</p>
-        </div>
-        <div className="flex mt-8">
-          <button
-            onClick={executeScroll}
-            className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
-            hover:bg-cyan-500 transition-all duration-300"
-          >
-            Veja meus projetos
-            <AiOutlineArrowDown className="text-2xl" />
-          </button>
-        </div>
+        <p ref={welcomeRef} ></p>
+        {
+          isVisible &&
+          <div className="title-container flex flex-col items-center text-white">
+            <div className="title-anim text-center">
+              <p className="tile-main font-light text-4xl">
+                Olá, meu nome é
+                <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
+                !
+              </p>
+              <p className="subtitle font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
+            </div>
+            <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
+              <button
+                onClick={executeScroll}
+                className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
+                hover:bg-cyan-500 transition-all duration-300"
+              >
+                Veja meus projetos
+                <AiOutlineArrowDown className="text-2xl" />
+              </button>
+            </div>
+          </div>
+        }
+        
       </div>
-      <div ref={mainContent} className="bg-neutral-800"></div>
     </div>
   );
 }
