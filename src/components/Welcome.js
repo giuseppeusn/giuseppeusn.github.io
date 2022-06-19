@@ -1,11 +1,10 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import Particles from 'react-tsparticles';
 import AppContext from '../context/AppContext';
 import './Welcome.css'
 
 function Welcome() {
-  // const mainContent = useRef(null);
   const { welcomeRef, welcomeScrollRef, content } = useContext(AppContext);
 
   const executeScroll = () => content.current.scrollIntoView();
@@ -110,7 +109,6 @@ function Welcome() {
           </button>
         </div>
       </div>
-      {/* <div ref={mainContent} className="bg-neutral-800"></div> */}
     </div>
   );
 }

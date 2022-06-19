@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext } from 'react';
 import Header from '../components/Header';
 import Title from '../components/Title';
 import AppContext from '../context/AppContext';
@@ -7,7 +7,6 @@ import useOnScreen from '../hook/useOnScreen';
 function AboutMe() {
   const { ref, content } = useContext(AppContext);
 
-  // const content = useRef(null);
   const contentVisible = useOnScreen(content);
 
   return (
