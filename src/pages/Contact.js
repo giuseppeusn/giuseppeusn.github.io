@@ -71,14 +71,14 @@ function Contact() {
                     <input 
                       type="email"
                       placeholder='Email'
-                      className="text-lg font-light p-2 border-b-2 border-cyan-800 bg-[#212121] w-[50%]
+                      className="text-lg font-light p-2 border-b-2 border-cyan-800 bg-[#212121] w-[50%] 
                       outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
                       name="email"
                     />
                   </div>
                   <textarea
                     placeholder='Sua mensagem'
-                    className="text-lg font-light h-24 border-b-2 border-cyan-800 p-2 bg-[#212121] w-[90%]
+                    className="text-lg font-light h-24 border-b-2 border-cyan-800 p-2 bg-[#212121] w-[90%] resize-none
                     outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
                     name="message"
                   />
