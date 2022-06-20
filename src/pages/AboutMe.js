@@ -17,7 +17,7 @@ function AboutMe() {
       {  
         contentVisible &&
         <div className="flex justify-center">
-          <Title title="sobre mim" />
+          <Title title="about me" />
         </div>
       }      
       </div>

@@ -49,11 +49,11 @@ function Contact() {
         {
           contentVisible ?
             <div>
-              <Title title="contato" />
+              <Title title="contact" />
               <div className="flex flex-col items-center mt-32 text-3xl">
                 <div className="contact-title">
-                  <h1 className="text-lg text-cyan-500 w-[420px] text-center">
-                    Dúvida/sugestão ou uma oportunidade de trabalho/projeto?
+                  <h1 className="text-lg text-cyan-500 w-[260px] text-center">
+                    Do you have a suggestion or a job/project opportunity?
                   </h1>
                 </div>            
                 <form
@@ -63,21 +63,21 @@ function Contact() {
                   <div className="flex items-around w-[90%]">
                     <input
                       type="text"
-                      placeholder='Nome'
+                      placeholder="Name"
                       className="text-lg font-light p-2 border-b-2 border-cyan-800 bg-[#212121] w-[50%] mr-3
                       outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
                       name="name"
                     />
                     <input 
                       type="email"
-                      placeholder='Email'
+                      placeholder="Email"
                       className="text-lg font-light p-2 border-b-2 border-cyan-800 bg-[#212121] w-[50%] 
                       outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
                       name="email"
                     />
                   </div>
                   <textarea
-                    placeholder='Sua mensagem'
+                    placeholder="Your message"
                     className="text-lg font-light h-24 border-b-2 border-cyan-800 p-2 bg-[#212121] w-[90%] resize-none
                     outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
                     name="message"
@@ -88,7 +88,7 @@ function Contact() {
                         className="flex items-center justify-center text-lg w-48 border border-cyan-500 p-3
                         text-white hover:bg-cyan-500 transition-all duration-300"
                       >
-                        Enviar
+                        Submit
                       </button>
                     ) : (
                     <ImSpinner2 className="animate-spin text-cyan-500 h-[54px]" />

@@ -18,12 +18,12 @@ function ContactNoti({isSucess}) {
           isSucess ? (
             <p className="flex justify-around items-center text-center w-56">
               <AiFillCheckCircle className="text-lime-500 text-4xl mr-3" />
-              Mensagem enviada <br/> com sucesso!
+              Your message has<br/>been sent successfully!
             </p>
           ) : (
             <p className="flex justify-around items-center text-center w-56">
               <AiFillCloseCircle className="text-rose-800 text-4xl mr-3" />
-              Erro ao enviar! <br/> Tente novamente!
+              Error sending!<br/>Please try again!
             </p>
           )
         }

@@ -15,11 +15,11 @@ function App() {
   return (
     <div className="bg-neutral-900 select-none scroll-smooth">
       <Welcome />
-      { pathname !== '/contato' && <SocialMedia /> }
+      { pathname !== '/contact' && <SocialMedia /> }
       <Routes>
         <Route exact path="/" element={ <AboutMe /> } />
         <Route path="/portfolio" element={ <Portfolio />} />
-        <Route path="/contato" element={ <Contact />} />
+        <Route path="/contact" element={ <Contact />} />
         <Route path="/trybewallet" render={() => {window.location.href="trybewallet"}} />
         <Route path="/shopping-cart" render={() => {window.location.href="shopping-cart"}} />
         <Route path="/tryunfo" render={() => {window.location.href="tryunfo"}} />

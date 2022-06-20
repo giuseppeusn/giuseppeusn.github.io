@@ -57,16 +57,18 @@ function Modal({ id }) {
                     className="bg-neutral-600 p-3 rounded flex items-center justify-around w-36 hover:bg-neutral-800"
                     href={modalInfo.repoUrl}
                     target="_blank"
-                    rel='noreferrer'
+                    rel="noreferrer"
+                    title="External link"
                   >
                     <AiFillGithub />
-                    Repositório
+                    Repository
                   </a>
                   <a
                     className="bg-cyan-500 p-3 rounded flex items-center justify-around w-32 hover:bg-cyan-700"
                     href={modalInfo.deployUrl}
                     target="_blank"
-                    rel='noreferrer'
+                    rel="noreferrer"
+                    title="External link"
                   >
                     <BsBoxArrowUpRight />
                     Deploy

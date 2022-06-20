@@ -95,12 +95,12 @@ function Welcome() {
           isVisible &&
           <div className="title-container flex flex-col items-center text-white">
             <div className="title-anim text-center">
-              <p className="tile-main font-light text-4xl">
-                Olá, meu nome é
+              <p className="tile-main font-base text-[40px]">
+                Hello, I'm
                 <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
                 !
               </p>
-              <p className="subtitle font-light text-[27px]">Estudante de Desenvolvimento Web Full-Stack</p>
+              <p className="subtitle font-base text-[30px]">Full-stack Web Development Student</p>
             </div>
             <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
               <button
@@ -108,7 +108,7 @@ function Welcome() {
                 className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
                 hover:bg-cyan-500 transition-all duration-300"
               >
-                Veja meus projetos
+                View my projects
                 <AiOutlineArrowDown className="text-2xl" />
               </button>
             </div>

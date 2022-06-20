@@ -44,7 +44,7 @@ function Portfolio() {
                       id={e.id}
                       onClick={ openModal }
                     >
-                    Ver mais
+                      See more
                     </button>
                   </div>
                 </div>

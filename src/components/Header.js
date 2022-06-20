@@ -24,7 +24,7 @@ function Header() {
       case '/portfolio':
         setActive({port: true, contact: false, about: false });
         break;
-      case '/contato':
+      case '/contact':
         setActive({port: false, contact: true, about: false });
         break;
       default:
@@ -41,7 +41,7 @@ function Header() {
         <ul className="flex justify-around w-[700px] text-xl text-white">
           <li className={ active.about ? 'active' : ''}>
             <Link to="/">
-              Sobre mim
+              About me
             </Link>
           </li>
           <li className={ active.port ? 'active' : ''}>
@@ -50,8 +50,8 @@ function Header() {
             </Link>
           </li>
           <li className={ active.contact ? 'active' : ''}>
-            <Link to="/contato">
-              Contato
+            <Link to="/contact">
+              Contact
             </Link>
           </li>
         </ul>
