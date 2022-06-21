@@ -3,6 +3,7 @@ import AppContext from './AppContext';
 
 function AppProvider({ children }) {
   const [modal, setModal] = useState(false);
+  const [is404, setIs404] = useState(false);
   const ref = useRef(null);
   const welcomeRef = useRef(null);
   const welcomeScrollRef = useRef(null);
@@ -11,6 +12,8 @@ function AppProvider({ children }) {
   const contextValue = {
     ref,
     modal,
+    is404,
+    setIs404,
     content,
     setModal,
     welcomeRef,

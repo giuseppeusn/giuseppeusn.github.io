@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import './App.css';
 import { Route, Routes, useLocation } from "react-router";
 import NotFound from './pages/NotFound';
@@ -8,13 +8,15 @@ import Contact from "./pages/Contact";
 import Welcome from "./components/Welcome";
 import Footer from "./components/Footer";
 import SocialMedia from "./components/SocialMedia";
+import AppContext from "./context/AppContext";
 
 function App() {
   const { pathname } = useLocation();
+  const { is404 } = useContext(AppContext);
 
   return (
     <div className="bg-neutral-900 select-none scroll-smooth">
-      <Welcome />
+      { !is404 && <Welcome /> }
       { pathname !== '/contact' && <SocialMedia /> }
       <Routes>
         <Route exact path="/" element={ <AboutMe /> } />
@@ -25,7 +27,7 @@ function App() {
         <Route path="/tryunfo" render={() => {window.location.href="tryunfo"}} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>      
-      <Footer />
+      { !is404 &&  <Footer /> }
     </div>
   );
 }
