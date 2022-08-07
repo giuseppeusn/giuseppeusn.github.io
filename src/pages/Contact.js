@@ -1,3 +1,4 @@
+/* eslint-disable no-fallthrough */
 import React, { useContext, useRef, useState} from 'react';
 import Header from '../components/Header';
 import AppContext from '../context/AppContext';
@@ -18,13 +19,22 @@ function Contact() {
     isSucess: true,
   });
 
+  const BORDER_DEFAULT = 'border-cyan-800'
+  const BORDER_ERROR = 'border-rose-900';
+
+  const [borderColor, setBorderColor] = useState({
+    name: BORDER_DEFAULT,
+    email: BORDER_DEFAULT,
+    message: BORDER_DEFAULT,
+  });
+
+  const [errorMessage, setErrorMessage] = useState(false);
+
   const [load, setLoad] = useState(false);
 
   const contentVisible = useOnScreen(contactContainer);
   
   const sendEmail = (e) => {
-    e.preventDefault();
-
     setLoad(true);
 
     emailjs.sendForm('service_tyo66sa', 'portfolio_template', e.target, '9xYB4MxNZkHphIcH1')
@@ -39,6 +49,49 @@ function Contact() {
         setTimeout(() => setNotify({ isSubmit: false, isSucess: false }), 4800);
       })
   };
+
+  const validateName = (name) => {
+    if (!name.value.length) {
+      setBorderColor((prev) => ({...prev, name: BORDER_ERROR}));
+      setErrorMessage(true);
+      return false;
+    }
+
+    setBorderColor((prev) => ({...prev, name: BORDER_DEFAULT}));
+    return true;
+  }
+
+  const validateEmail = (email) => {
+    if (!email.value.length) {
+      setBorderColor((prev) => ({...prev, email: BORDER_ERROR}));
+      setErrorMessage(true);
+      return false;
+    }
+
+    setBorderColor((prev) => ({...prev, email: BORDER_DEFAULT}));
+    return true;
+  }
+
+  const validateMessage = (message) => {
+    if (!message.value.length) {
+      setBorderColor((prev) => ({...prev, message: BORDER_ERROR}));
+      setErrorMessage(true);
+      return false;
+    }
+
+    setBorderColor((prev) => ({...prev, message: BORDER_DEFAULT}));
+    return true;
+  }
+
+  const validateForm = (e) => {
+    e.preventDefault();
+    const { name, email, message } = e.target;
+
+    if (validateName(name) && validateEmail(email) && validateMessage(message)) {
+      setErrorMessage(false);
+      sendEmail(e);
+    }
+  }
 
   return (
     <div>
@@ -57,31 +110,34 @@ function Contact() {
                   </h1>
                 </div>            
                 <form
-                  onSubmit={sendEmail}
+                  onSubmit={validateForm}
                   className="form-control flex flex-col justify-around items-center mt-10 h-80 w-[600px] rounded-lg"
                 >
                   <div className="flex items-around w-[90%]">
                     <input
                       type="text"
                       placeholder="Name"
-                      className="text-lg font-light p-2 border-b-2 border-cyan-800 bg-[#212121] w-[50%] mr-3
-                      outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
+                      className={ `text-lg font-light p-2 border-b-2 ${borderColor.name} bg-[#212121] w-[50%] mr-3
+                      outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white` }
                       name="name"
                     />
                     <input 
                       type="email"
                       placeholder="Email"
-                      className="text-lg font-light p-2 border-b-2 border-cyan-800 bg-[#212121] w-[50%] 
-                      outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
+                      className={ `text-lg font-light p-2 border-b-2 ${borderColor.email} bg-[#212121] w-[50%] 
+                      outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white` }
                       name="email"
-                    />
+                      />
                   </div>
                   <textarea
                     placeholder="Your message"
-                    className="text-lg font-light h-24 border-b-2 border-cyan-800 p-2 bg-[#212121] w-[90%] resize-none
-                    outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white"
+                    className={ `text-lg font-light h-24 border-b-2 ${borderColor.message} p-2 bg-[#212121] w-[90%] resize-none
+                    outline-none focus:border-cyan-500 transition-all duration-300 placeholder-white text-white` }
                     name="message"
                   />
+                  <span className={ `text-lg text-rose-900 ${!errorMessage && 'opacity-0'} transition-all duration-300` }>
+                    Required field
+                  </span>
                   { !load ? (
                       <button
                         type="submit"
