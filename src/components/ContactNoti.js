@@ -16,12 +16,12 @@ function ContactNoti({isSucess}) {
       <div className="bg-[#212121] border-b border-cyan-500 text-white p-3">
         {
           isSucess ? (
-            <p className="flex justify-around items-center text-center w-56">
+            <p className="noti-text flex justify-around items-center text-center w-56">
               <AiFillCheckCircle className="text-lime-500 text-4xl mr-3" />
               Your message has<br/>been sent successfully!
             </p>
           ) : (
-            <p className="flex justify-around items-center text-center w-56">
+            <p className="noti-text flex justify-around items-center text-center w-56">
               <AiFillCloseCircle className="text-rose-800 text-4xl mr-3" />
               Error sending!<br/>Please try again!
             </p>

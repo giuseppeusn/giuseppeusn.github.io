@@ -23,3 +23,14 @@
     transform: translateX(248px);
   }
 }
+
+@media screen  and (max-width: 500px) {
+  .noti-text {
+    font-size: 0.8rem;
+    width: 12rem;
+  }
+
+  .noti-text svg {
+    font-size: 2rem;
+  }
+}
