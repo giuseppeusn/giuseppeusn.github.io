@@ -4,7 +4,7 @@ import Title from '../components/Title';
 import AppContext from '../context/AppContext';
 import useOnScreen from '../hook/useOnScreen';
 import ProfilePic  from '../images/profile_pic.jpg';
-import skillsData from '../skillsData.js';
+import skillsData from '../data/skillsData.js';
 
 function AboutMe() {
   const { ref, content } = useContext(AppContext);
