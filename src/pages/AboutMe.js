@@ -15,7 +15,7 @@ function AboutMe() {
     <div>
       <Header />
       <p ref={ref}></p>
-      <div ref={content} className="h-screen bg-neutral-800 mt-[1px]">
+      <div ref={content} className="bg-neutral-800 mt-[1px]">
       {  
         contentVisible &&
         <div className="flex flex-col justify-center">
@@ -28,9 +28,9 @@ function AboutMe() {
                 <span className="text-cyan-500"> me</span>
                 ?
               </span>
-              <p className="text-white w-96 text-center mt-5">
-                I'm a Front-end developer, graduated in IT technician,
-                student of Mechatronics Engineering and student of Full-stack Web Development at Trybe.
+              <p className="text-white w-[400px] text-center mt-5">
+                I'm a Full-stack Web Developer, graduated in IT technician and
+                student of Mechatronics Engineering.
                 <br/>
                 <br/>
                 Driven by curiosity, I love technology and innovation. I'm interested in innovative and high-impact projects,
@@ -39,22 +39,30 @@ function AboutMe() {
             </div>
             <div className="text-white">
               <h1 className="text-3xl uppercase font-bold text-center">My <span className="text-cyan-500">skills</span></h1>
-              <ul className="mt-5">
+              <ul className="my-5 flex flex-col items-center">
                 {
                   skillsData.map((type) => (
-                    <li className="text-xl font-semibold mt-10 text-center border-b-2 border-black border-opacity-20">
+                    <li
+                      className="text-xl font-semibold mt-10 text-center border-b-2 border-black
+                      border-opacity-20 cursor-pointer w-fit"
+                    >
                       {type.typeSkill}
                       <div className="flex justify-around mt-5">
                         {
                           type.skills.map((skill) => (
-                            <span className="flex flex-col items-center p-2 text-sm hover:text-cyan-500">
-                                <img
-                                src={skill.image}
-                                alt={`${skill.name} icon`}
-                                className="w-8"
-                              />
-                              <span className="mt-2">{skill.name}</span>
-                            </span>
+                            <a href={skill.url} target="_blank" rel="noreferrer">
+                              <span
+                                className="flex flex-col items-center p-3 text-sm hover:text-cyan-500
+                                min-h-[84px] justify-between"
+                              >
+                                  <img
+                                  src={skill.image}
+                                  alt={`${skill.name} icon`}
+                                  className={skill.class ? skill.class : "w-8"}
+                                />
+                                <span className="mt-2">{skill.name}</span>
+                              </span>
+                            </a>
                           ))
                         }
                       </div>
