@@ -12,7 +12,7 @@ function ContactNoti({isSucess}) {
   },[]);
 
   return (
-    <div className={`wrap-noti ${mode} fixed top-0 right-0 mt-28`}>
+    <div className={`wrap-noti z-[10] ${mode} fixed top-0 right-0 mt-28`}>
       <div className="bg-[#212121] border-b border-cyan-500 text-white p-3">
         {
           isSucess ? (
