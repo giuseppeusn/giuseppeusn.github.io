@@ -4,7 +4,7 @@ import Modal from '../components/Modal';
 import Title from '../components/Title';
 import AppContext from '../context/AppContext';
 import useOnScreen from '../hook/useOnScreen';
-import projects from '../projectData';
+import projects from '../data/projectData';
 import './Portfolio.css';
 
 function Portfolio() {

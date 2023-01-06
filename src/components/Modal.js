@@ -4,7 +4,7 @@ import { CgClose } from 'react-icons/cg';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import AppContext from '../context/AppContext';
 import './Modal.css';
-import projects from '../projectData';
+import projects from '../data/projectData';
 import ImageGallery from 'react-image-gallery';
 
 function Modal({ id }) {

@@ -100,15 +100,15 @@ function Welcome() {
                 <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
                 !
               </p>
-              <p className="subtitle font-base text-[30px]">Full-stack Web Development Student</p>
+              <p className="subtitle font-base text-[30px]">Full-stack Web Developer</p>
             </div>
             <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
               <button
                 onClick={executeScroll}
-                className="flex items-center justify-around text-lg w-56 border border-cyan-500 p-3
+                className="flex items-center justify-around text-lg w-48 border border-cyan-500 p-3
                 hover:bg-cyan-500 transition-all duration-300"
               >
-                View my projects
+                Learn more
                 <AiOutlineArrowDown className="text-2xl" />
               </button>
             </div>
