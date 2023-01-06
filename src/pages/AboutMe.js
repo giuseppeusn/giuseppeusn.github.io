@@ -15,7 +15,7 @@ function AboutMe() {
     <div>
       <Header />
       <p ref={ref}></p>
-      <div ref={content} className="bg-neutral-800 mt-[1px]">
+      <div ref={content} className="min-h-screen bg-neutral-800 mt-[1px]">
       {  
         contentVisible &&
         <div className="flex flex-col justify-center">
