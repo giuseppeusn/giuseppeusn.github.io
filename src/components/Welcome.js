@@ -100,7 +100,7 @@ function Welcome() {
                 <span className="text-cyan-500 font-semibold"> Giuseppe Nunes</span>
                 !
               </p>
-              <p className="subtitle font-base text-[30px]">Full-stack Web Development Student</p>
+              <p className="subtitle font-base text-[30px]">Full-stack Web Developer</p>
             </div>
             <div className="title-anim flex mt-8 opacity-0" style={ { "--order": 1} }>
               <button
