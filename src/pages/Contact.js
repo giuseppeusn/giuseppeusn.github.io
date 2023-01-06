@@ -154,7 +154,6 @@ function Contact() {
                 <SocialMedia className="social-contact" />
               </div>
             </div>
-            // :  <div ref={content} className="h-screen bg-neutral-800"></div>
         }
         </div>
       </div>
