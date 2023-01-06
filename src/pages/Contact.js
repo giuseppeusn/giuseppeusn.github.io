@@ -97,10 +97,10 @@ function Contact() {
     <div>
       <Header />
       <p ref={ref}></p>
-      <div className="contact-container h-screen bg-neutral-800 flex flex-col pb-28 mt-[1px]">
+      <div ref={content} className="contact-container min-h-screen bg-neutral-800 flex flex-col pb-28 mt-[1px]">
         <div ref={contactContainer} className="relative">
         {
-          contentVisible ?
+          contentVisible &&
             <div>
               <Title title="contact" />
               <div className="flex flex-col items-center mt-32 text-3xl">
@@ -154,7 +154,7 @@ function Contact() {
                 <SocialMedia className="social-contact" />
               </div>
             </div>
-            :  <div ref={content} className="h-screen bg-neutral-800"></div>
+            // :  <div ref={content} className="h-screen bg-neutral-800"></div>
         }
         </div>
       </div>
